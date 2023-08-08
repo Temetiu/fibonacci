@@ -1,21 +1,20 @@
 fn main() {
     println!("n-th Fibonacci number");
 
-    let fibo_number: u32 = fibo_classic(10);
+    let fibo_number: usize = fibo_classic(50);
     println!("{fibo_number}");
 }
 
-
 // method with loop
-fn fibo_classic(n: u32) -> u32 {
-    let mut fibo_n0: u32 = 1;
-    let mut fibo_n1: u32 = 1;
-    let mut index: u32 = 2;
+fn fibo_classic(n: usize) -> usize {
+    let mut fibo_n0: usize = 1;
+    let mut fibo_n1: usize = 1;
+    let mut index: usize = 2;
     if n == 0 || n == 1 {
         1
     }
     else {
-        let mut fibo_number: u32 = 0;
+        let mut fibo_number: usize = 0;
         while index < n + 1 {
             fibo_number = fibo_n0 + fibo_n1;
             fibo_n0 = fibo_n1;
